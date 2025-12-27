@@ -47,7 +47,7 @@ export default function NavBar({ navElements }: navProps) {
                     <div className="flex items-center justify-start w-auto md:w-48 z-20">
                         <div className="flex items-center group cursor-pointer">
                             <ScrollIntoView selector="#home">
-                                <div className="relative rounded-full p-1 bg-linear-to-tr from-primary/20 to-transparent group-hover:from-primary/40 transition-all duration-500">
+                                <div className="relative rounded-full p-1 bg-gradient-to-tr from-primary/20 to-transparent group-hover:from-primary/40 transition-all duration-500">
                                     <img 
                                         src="/logo.png" 
                                         alt="Logo" 

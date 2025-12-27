@@ -3,7 +3,7 @@ import { ExternalLink, Github, Code2, Zap, Smartphone, BarChart3, ArrowRight } f
 export default function ProjectSection() {
   
   const projects = [
-    {
+      {
       title: "Nexus Dashboard",
       category: "FinTech",
       desc: "A high-performance real-time analytics dashboard for financial data visualization with complex charts.",
@@ -57,56 +57,37 @@ export default function ProjectSection() {
     <section id="projects" className="relative py-24 md:py-32 overflow-hidden bg-background">
       
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:4rem_4rem] mask-[radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-50 pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Header */}
-        <div className="relative flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
+        <div className="relative flex flex-col items-center justify-end mb-20 gap-12 md:gap-24 w-full">
+      
+          
+
+          {/* Decorative Glow Background */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-primary/20 rounded-full blur-[120px] opacity-40 pointer-events-none" />
+
+          {/* Centered Content */}
+          <div className="relative z-10 text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-6">
             
-            {/* Decorative Glow Background */}
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-[60px] opacity-50 pointer-events-none" />
-
-            {/* Left Side: Content */}
-            <div className="relative z-10 max-w-3xl">
-
-                {/* Updated Title - Larger & Gradient */}
-                <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground mb-4 leading-[1.1]">
-                Selected <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-emerald-400 to-teal-500">
-                    Masterpieces
-                </span>
+            {/* Badge */}
+            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              Our Portfolio
+            </div> */}
+            <div className="text-center mb-16 md:mb-20">
+                <h2 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
+                    Our <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-emerald-500">Projects</span>
                 </h2>
-                
-                {/* Updated Description - Sharper typography */}
-                <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed border-l-2 border-primary/20 pl-4">
-                A showcase of complex algorithms translated into seamless, user-centric digital experiences.
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    A showcase of complex algorithms translated into <span className="text-foreground font-bold"> seamless, user-centric</span> digital experiences.
                 </p>
             </div>
-            
-            {/* Right Side: Action Button */}
-            <div className="relative z-10 w-full md:w-auto flex flex-col items-start md:items-end gap-4">
-                <span className="text-xs font-mono text-primary/60 uppercase tracking-widest">Source Code</span>
-                
-                <a 
-                href="https://github.com/devnova-dn" 
-                className="
-                    group relative px-8 py-4 bg-primary/20 backdrop-blur-sm border border-border rounded-xl flex items-center gap-3 text-foreground font-semibold
-                    hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-[0_10px_30px_-10px_rgba(42,198,158,0.4)]
-                    transition-all duration-300
-                "
-                >
-                <Github size={20} />
-                <span>View Github</span>
-                {/* Arrow Icon inside button */}
-                <ArrowRight 
-                    size={18} 
-                    className="transition-transform duration-300 group-hover:translate-x-1 opacity-50 group-hover:opacity-100" 
-                />
-                </a>
-            </div>
-            </div>
+          </div>  
+        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,7 +100,7 @@ export default function ProjectSection() {
               {/* Project Image / Preview Area */}
               <div className="relative aspect-video w-full overflow-hidden bg-muted">
                 {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-linear-to-br ${project.gradient} opacity-80 group-hover:opacity-100 transition-opacity duration-500`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80 group-hover:opacity-100 transition-opacity duration-500`} />
                 
                 {/* Icon Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center p-8 transition-transform duration-500 group-hover:scale-110">
@@ -140,7 +121,7 @@ export default function ProjectSection() {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col grow">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="mb-3">
                   <span className="text-xs font-bold text-primary uppercase tracking-wider">
                     {project.category}
@@ -150,7 +131,7 @@ export default function ProjectSection() {
                   </h3>
                 </div>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6 grow">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
                   {project.desc}
                 </p>
 
@@ -173,7 +154,7 @@ export default function ProjectSection() {
 
         {/* Mobile View All Button */}
         <div className="mt-12 md:hidden text-center">
-          <a href="#" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors">
+          <a href="https://github.com/devnova-dn" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors">
             View Github <Github size={18} />
           </a>
         </div>
