@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Code2, Zap, Smartphone, BarChart3, ArrowRight } from "lucide-react";
+import { ExternalLink, Github, Code2, Zap, Smartphone, BarChart3 } from "lucide-react";
 
 export default function ProjectSection() {
   
@@ -57,7 +57,7 @@ export default function ProjectSection() {
     <section id="projects" className="relative py-24 md:py-32 overflow-hidden bg-background">
       
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:4rem_4rem] mask-[radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-50 pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -68,7 +68,7 @@ export default function ProjectSection() {
           
 
           {/* Decorative Glow Background */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-primary/20 rounded-full blur-[120px] opacity-40 pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-125 h-125 bg-primary/20 rounded-full blur-[120px] opacity-40 pointer-events-none" />
 
           {/* Centered Content */}
           <div className="relative z-10 text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-6">
@@ -100,7 +100,7 @@ export default function ProjectSection() {
               {/* Project Image / Preview Area */}
               <div className="relative aspect-video w-full overflow-hidden bg-muted">
                 {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80 group-hover:opacity-100 transition-opacity duration-500`} />
+                <div className={`absolute inset-0 bg-linear-to-br ${project.gradient} opacity-80 group-hover:opacity-100 transition-opacity duration-500`} />
                 
                 {/* Icon Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center p-8 transition-transform duration-500 group-hover:scale-110">
@@ -121,7 +121,7 @@ export default function ProjectSection() {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col grow">
                 <div className="mb-3">
                   <span className="text-xs font-bold text-primary uppercase tracking-wider">
                     {project.category}
@@ -131,7 +131,7 @@ export default function ProjectSection() {
                   </h3>
                 </div>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6 grow">
                   {project.desc}
                 </p>
 
