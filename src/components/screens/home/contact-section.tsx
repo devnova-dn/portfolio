@@ -38,7 +38,7 @@ export default function ContactSection() {
     message: ""
   });
 
-  const sendEmail = (e) => {
+const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     // Reset errors
