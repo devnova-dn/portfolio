@@ -6,7 +6,7 @@ import ProjectSection from '@/components/screens/home/projects-section'; // ✅ 
 import HomeScreen from '@/components/screens/home/home-section'; 
 import { useRef } from 'react';
 import ContactSection from '@/components/screens/home/contact-section';
-import CertificatesSection from '@/components/screens/home/certificates-section';
+// import CertificatesSection from '@/components/screens/home/certificates-section';
 
 export default function HomePage() {
     const homeRef = useRef<HTMLDivElement | null>(null);
@@ -45,9 +45,9 @@ export default function HomePage() {
             <ProjectSection/>
         </div>
 
-        <div ref={certificatesRef} id='certificates' className='relative z-10'>
+        {/* <div ref={certificatesRef} id='certificates' className='relative z-10'>
           <CertificatesSection/>
-        </div>
+        </div> */}
 
         <div ref={contactRef} id='contact' className="relative z-10">
             <ContactSection/>

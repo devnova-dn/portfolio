@@ -1,55 +1,40 @@
-import { ExternalLink, Github, Code2, Zap, Smartphone, BarChart3 } from "lucide-react";
+import { ExternalLink, Github, ChefHat, Sparkles, ShoppingBag } from "lucide-react";
 
 export default function ProjectSection() {
   
   const projects = [
-      {
-      title: "Nexus Dashboard",
-      category: "FinTech",
-      desc: "A high-performance real-time analytics dashboard for financial data visualization with complex charts.",
-      tags: ["React", "TypeScript", "Tailwind"],
-      gradient: "from-indigo-500 via-purple-500 to-pink-500",
-      icon: <BarChart3 className="w-full h-full text-white/90" />
-    },
     {
-      title: "GreenGrocer App",
+      title: "GourmetHub - Premium Food E-Commerce Platform",
       category: "E-Commerce",
-      desc: "A full-stack mobile-first e-commerce platform featuring cart management, payment gateways, and live tracking.",
-      tags: ["Next.js", "Stripe", "Node.js"],
-      gradient: "from-emerald-400 to-green-600",
-      icon: <Smartphone className="w-full h-full text-white/90" />
+      gitUrl: "https://github.com/devnova-dn/Food_Delivery_Project",
+      url: "https://food-delivery-project1.vercel.app",
+      imageUrl: "/projects/food.png",
+      desc: "A comprehensive, production-ready e-commerce website for food products built with Next.js 14, MongoDB Atlas, and Tailwind CSS. This application includes a full-featured customer interface and a powerful admin dashboard.",
+      tags: ["Next.js 14", "MongoDB", "Tailwind CSS"],
+      gradient: "from-indigo-500 via-purple-500 to-pink-500",
+      icon: <ShoppingBag className="w-full h-full text-white/90" />
     },
     {
-      title: "DevNova AI Suite",
-      category: "AI Tool",
-      desc: "Internal tool for code generation and automated testing using LLM integration, boosting developer velocity.",
-      tags: ["Python", "OpenAI", "FastAPI"],
-      gradient: "from-cyan-500 to-blue-600",
-      icon: <Zap className="w-full h-full text-white/90" />
+      title: "Lessence Parfums",
+      category: "Luxury Retail",
+      gitUrl: "https://github.com/Oumaima-El-Badraouy/L-ESSENCE",
+      url: "https://l-essence-pi.vercel.app/",
+      imageUrl: "/projects/parfums.png",
+      desc: "A luxurious, high-end perfume e-commerce website featuring a sophisticated 'Dark Luxury' design aesthetic with gold accents, smooth animations, and a shopping cart integrated with WhatsApp ordering.",
+      tags: ["React", "Tailwind CSS", "WhatsApp API"],
+      gradient: "from-amber-400 via-yellow-500 to-orange-600",
+      icon: <Sparkles className="w-full h-full text-white/90" />
     },
     {
-      title: "EcoTrack SaaS",
-      category: "Sustainability",
-      desc: "A carbon footprint tracking platform for enterprises, helping them meet sustainability goals.",
-      tags: ["Vue.js", "Firebase", "D3.js"],
-      gradient: "from-teal-400 to-emerald-700",
-      icon: <Code2 className="w-full h-full text-white/90" />
-    },
-    {
-      title: "MediCare Portal",
-      category: "Healthcare",
-      desc: "Secure patient management system with appointment scheduling and medical history tracking.",
-      tags: ["Laravel", "MySQL", "React"],
-      gradient: "from-red-400 to-rose-600",
-      icon: <Code2 className="w-full h-full text-white/90" />
-    },
-    {
-      title: "CryptoExchange",
-      category: "Crypto",
-      desc: "A decentralized cryptocurrency exchange interface with real-time websocket updates.",
-      tags: ["Solidity", "Web3.js", "React"],
-      gradient: "from-orange-400 to-amber-600",
-      icon: <Zap className="w-full h-full text-white/90" />
+      title: "DishDiscovery - Smart Recipe Finder",
+      category: "Web Application",
+      gitUrl: "https://github.com/devnova-dn/Recipes_Project",
+      url: "https://recipes-project-vert.vercel.app/",
+      imageUrl: "/projects/recipe.png",
+      desc: "A modern Vue 3-based smart recipe application that matches dishes to ingredients you already have. Features intelligent matching algorithms, multi-language support (4 languages), advanced filters, and a modern glassmorphism dark UI.",
+      tags: ["Vue 3", "Pinia", "Tailwind CSS", "Vite"],
+      gradient: "from-cyan-600 via-blue-600 to-purple-700",
+      icon: <ChefHat className="w-full h-full text-white/90" />
     },
   ];
 
@@ -64,20 +49,9 @@ export default function ProjectSection() {
         
         {/* Header */}
         <div className="relative flex flex-col items-center justify-end mb-20 gap-12 md:gap-24 w-full">
-      
-          
-
-          {/* Decorative Glow Background */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-125 h-125 bg-primary/20 rounded-full blur-[120px] opacity-40 pointer-events-none" />
 
-          {/* Centered Content */}
           <div className="relative z-10 text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-6">
-            
-            {/* Badge */}
-            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase">
-              <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              Our Portfolio
-            </div> */}
             <div className="text-center mb-16 md:mb-20">
                 <h2 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
                     Our <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-emerald-500">Projects</span>
@@ -99,24 +73,39 @@ export default function ProjectSection() {
               
               {/* Project Image / Preview Area */}
               <div className="relative aspect-video w-full overflow-hidden bg-muted">
-                {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-linear-to-br ${project.gradient} opacity-80 group-hover:opacity-100 transition-opacity duration-500`} />
                 
-                {/* Icon Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center p-8 transition-transform duration-500 group-hover:scale-110">
-                   <div className="w-20 h-20 bg-black/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/10">
-                      {project.icon}
-                   </div>
-                </div>
+                {/* The Image */}
+                <img 
+                  src={project.imageUrl} 
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
 
-                {/* Overlay Links on Hover */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-[2px]">
-                   <button className="p-3 bg-white text-black rounded-full hover:scale-110 transition-transform" aria-label="View Live">
+                {/* Dark Overlay for Hover (Desktop Only) */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-[2px] lg:group-hover:flex md:hidden">
+                   
+                   {/* View Live Link */}
+                   <a 
+                     href={project.url} 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="p-3 bg-white text-black rounded-full hover:scale-110 transition-transform" 
+                     aria-label="View Live"
+                   >
                      <ExternalLink size={20} />
-                   </button>
-                   <button className="p-3 bg-white/20 text-white backdrop-blur-md rounded-full hover:bg-white hover:text-black hover:scale-110 transition-all border border-white/10" aria-label="View Code">
+                   </a>
+
+                   {/* View Code Link */}
+                   <a 
+                     href={project.gitUrl} 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="p-3 bg-white/20 text-white backdrop-blur-md rounded-full hover:bg-white hover:text-black hover:scale-110 transition-all border border-white/10" 
+                     aria-label="View Code"
+                   >
                      <Github size={20} />
-                   </button>
+                   </a>
+
                 </div>
               </div>
 
@@ -136,7 +125,7 @@ export default function ProjectSection() {
                 </p>
 
                 {/* Tech Stack Tags */}
-                <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag) => (
                     <span 
                       key={tag}
@@ -146,6 +135,27 @@ export default function ProjectSection() {
                     </span>
                   ))}
                 </div>
+
+                {/* Mobile & Tablet Action Buttons (Visible on screens smaller than Desktop) */}
+                <div className="flex gap-3 mt-auto lg:hidden">
+                   <a 
+                     href={project.url} 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="flex-1 py-2.5 px-4 rounded-lg bg-primary text-primary-foreground text-sm font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors"
+                   >
+                     <ExternalLink size={16} /> Live Site
+                   </a>
+                   <a 
+                     href={project.gitUrl} 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="flex-1 py-2.5 px-4 rounded-lg bg-secondary text-secondary-foreground border border-border text-sm font-semibold flex items-center justify-center gap-2 hover:bg-secondary/80 transition-colors"
+                   >
+                     <Github size={16} /> Code
+                   </a>
+                </div>
+
               </div>
 
             </div>
