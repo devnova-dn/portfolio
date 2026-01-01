@@ -49,7 +49,7 @@ export default function NavBar({ navElements }: navProps) {
                             <ScrollIntoView selector="#home">
                                 <div className="relative rounded-full p-1 bg-linear-to-tr from-primary/20 to-transparent group-hover:from-primary/40 transition-all duration-500">
                                     <img 
-                                        src="/logo.png" 
+                                        src="https://img.sanishtech.com/u/b108d3a7e707e0b27a1331b1505b8019.png" 
                                         alt="Logo" 
                                         className="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover bg-background" 
                                     />

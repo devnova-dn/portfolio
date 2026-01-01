@@ -12,14 +12,14 @@ export default function HomePage() {
     const homeRef = useRef<HTMLDivElement | null>(null);
     const aboutRef = useRef<HTMLDivElement | null>(null);
     const projectsRef = useRef<HTMLDivElement | null>(null);
-    const certificatesRef = useRef<HTMLDivElement | null>(null);
+    // const certificatesRef = useRef<HTMLDivElement | null>(null);
     const contactRef = useRef<HTMLDivElement | null>(null);
 
     const navElements = [
         { path: "/", element: "Home", ref: homeRef },
         { path: "/about", element: "About", ref: aboutRef },
         { path: "/projects", element: "Projects", ref: projectsRef },
-        { path: "/certificates", element: "Certificates", ref: certificatesRef },
+        // { path: "/certificates", element: "Certificates", ref: certificatesRef },
         { path: "/contact", element: "Contact", ref: contactRef },
     ];
 
