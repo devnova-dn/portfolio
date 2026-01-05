@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ChefHat, Sparkles, ShoppingBag } from "lucide-react";
+import { ExternalLink, Github, ChefHat, Sparkles, ShoppingBag, BookOpen } from "lucide-react";
 
 export default function ProjectSection() {
   
@@ -35,6 +35,17 @@ export default function ProjectSection() {
       tags: ["Vue 3", "Pinia", "Tailwind CSS", "Vite"],
       gradient: "from-cyan-600 via-blue-600 to-purple-700",
       icon: <ChefHat className="w-full h-full text-white/90" />
+    },
+    {
+      title: "Learn Language App",
+      category: "Education",
+      gitUrl: "https://github.com/houdakabbouri/language_app",
+      url: "https://language-app-ten-red.vercel.app/",
+      imageUrl: "/projects/language.png",
+      desc: "A web application for learning languages built with React + TypeScript + Vite. The app is designed to be fast, modern, and scalable, with a clean user interface and a solid architecture suitable for future growth.",
+      tags: ["React", "TypeScript", "Vite"],
+      gradient: "from-teal-400 to-emerald-600",
+      icon: <BookOpen className="w-full h-full text-white/90" />
     },
   ];
 
